@@ -42,3 +42,14 @@ As we can see below, our columns "date" is like a "object"...we will change it t
  
 ![](img/data_type1.png)
 ![](img/data_types2.png)
+
+## 4.2. Fillout NA
+
+This step is extremely important because our machine learning algorithms are not able of handling null values. To solve this problem there is no right answer, it will depend on your business context, we have to be aware of it and test what will be best suited to that situation. There are three ways to fix this.
+
+Exclude lines with null values.
+Replace with the average or median, for example.
+Change according to the business context.
+This choice is very important because, if we choose to exclude the rows from our data set, depending on the amount of null values, we will eliminate a considerable amount of data so that our model could train.
+
+![](img/na1.png)
