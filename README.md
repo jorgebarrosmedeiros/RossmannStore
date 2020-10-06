@@ -53,3 +53,31 @@ Change according to the business context.
 This choice is very important because, if we choose to exclude the rows from our data set, depending on the amount of null values, we will eliminate a considerable amount of data so that our model could train.
 
 ![](img/na1.png)
+
+As I said above, there is no 100% correct or 100% wrong answer about how you should treat the missing values in your dataset. Every choice has a waiver. You have to be aware of this and test what will best suit that situation.
+
+Therefore, this section will focus on filling in these null values. For that to happen, I chose to use the business context to solve our problem. Below, we will explain each change.
+
+- competition_distance
+    - This variable tells us how far the nearest competitor is from our store. I chose to replace it with 200000, as this will be big enough to tell us that there is no competitor close to our store.
+
+- competition_open_since_month
+    - This column tells us how long in months the competing store opened. We will replace it with the month that was filled in the date column.
+
+- competition_open_since_year
+    - This column tells us how long in years the competing store has opened. We will replace it with the year that was filled in the date column.
+
+- promo2_since_week
+    -   describes the calendar week when the store started participating in Promo2. We will extract the week from the date column and replace the values that are null.
+
+- promo2_since_year
+    - describes the year when the store started participating in Promo2. We will extract the year from the date column and replace the values that are null.
+
+- promo_interval
+    - describes the consecutive intervals Promo2 is started, naming the months the promotion is started anew. E.g. "Feb,May,Aug,Nov" means each round starts in February, May, August, November of any given year for that store. We replaced the null values with 0 and checked if the store participated in promo2 or not represented by 0 and 1.
+    
+After fillout na:
+
+![](img/na2.png)
+
+
