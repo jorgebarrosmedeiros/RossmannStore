@@ -131,3 +131,91 @@ As we can see, it is close to a normal distribution, however, it has a positive 
 - store_type -> The store_type "a" that sells more, does not have such a peak compared to the others.
 
 - assortment -> We see that stores with the "extra" type assortment sell less, but have a higher distribution. So, there are stores that sell more with the "extra" assortment and stores that sell less.
+
+## 6.3. Hypothesis
+
+### H8. Stores should sell more over the years.
+
+![](img/eda4.png)
+
+False Stores sell less over the years.
+
+### H9. Stores should sell more in the second half of the year.
+
+![](img/eda5.png)
+
+False Stores sell less in the second half of the year.
+
+### H6. Stores with more consecutive promotions should sell more.
+
+![](img/eda6.png)
+
+False Stores with more consecutive promotions sell less.
+
+### H11. Stores should sell less on weekends.
+
+![](img/eda7.png)
+
+True Stores sell less on weekends.
+
+### Summary Hypothesis
+
+We also outlined other hypotheses, but the previous presented ones were the most insightful.
+
+![](img/eda8.png)
+
+## 6.4. Multivariate Analysis
+
+![](img/eda9.png)
+
+We will look at the columns that have the lightest and darkest data, note the following columns:
+
+The variables that have some dependence on the response variable are: 'day_of_week', 'open' and 'promo'. We also have the variable 'Customers', but it would be necessary to build a project to predict this variable and after that, we could use it, so we can remove it.
+
+![](img/eda10.png)
+
+According to the heat map, we found that there is a high correlation between the variables assortment and store type. The result of 0.54 is an average correlation. This means that the bigger the store, the bigger the product range. The other variables have weak correlations with each other.
+
+## 7.0. Machine Learning Modelling
+
+### 7.1. Single Performance
+
+![](img/ml1.png)
+
+We obtained the following results, however, in order for our model to be reliable, we applied the cross-validation technique.
+
+### 7.2. Real Performance - Cross-Validation
+
+![](img/ml2.png)
+
+As we see above, our best performing algorithm was the XGBoost Classifier
+For computational reasons, we did not perform cross-validation at RandomForest.
+
+### 7.3. Hyperparameter Fine Tunning - XGBoostClassifier
+
+In our best algorithm, we apply the technique to find the best parameters. Below, we can see its performance with the chosen parameters.
+
+![](img/ml3.png)
+
+## 8.0. Business Performance
+
+![](img/ml5.png)
+
+As observed in the results, we need to report to the business team, that there are stores that are more difficult to make the predictions.
+
+![](img/ml6.png)
+
+There are stores that are more difficult to make the predictions. Thus, some strategies that may solve this challenge in the next project iteration could be:
+
+- Taking a closer look on the variables (add or remove).
+- Try other methods and other techniques in order to improve the predictions.
+
+## 9.0. Machine Learning Performance
+
+![](img/ml7.png)
+
+- By observing the first and second line plots, we can see that the predictions or our model is pretty close to the real value for sales. On the other hand, the error rate has some variance.
+
+- Observing the histogram, the error distribution almost follow a normal distribution.
+
+- Observing the scatterplot, there are some stores with higher error. However, the other points seems like a horizontal tube, which means that there are a few variation rate in the error.
