@@ -1,6 +1,6 @@
 # RossmannStore - Forescasting Sales
 
-![]("img/rossmann_store.png")
+![](img/rossmann_store.png)
 
 ---
 
