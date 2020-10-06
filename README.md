@@ -80,4 +80,17 @@ After fillout na:
 
 ![](img/na2.png)
 
+## 4.3. Statistical Descriptive
 
+![](img/stat_desc.png)
+
+Let's look at our "sales" column
+
+Min = 0, means that on that day the store was closed.
+Max = 41551
+Range = 451151 - 0
+Mean = It tells us that on average, 5773 sales are made per day.
+Median = Median very close to the average
+Std = Tell us that our sales may vary by +/- 3849, that is, there are days that total sales are (5773 + 3849) and there are days that total sales are (5773 - 3849)
+Skew = Informs us how shifted our graph is in relation to the origin.
+Kurtosis = Tells us how "pointy" our distribution is, or how close to a normal distribution it is.
